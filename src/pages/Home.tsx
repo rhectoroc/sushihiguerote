@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { GridSection } from '../components/GridSection';
+import { CardsSwiper } from '../components/CardsSwiper';
 import { Footer } from '../components/Footer';
 import { ImageModal } from '../components/ImageModal';
 import '../index.css';
@@ -41,13 +42,12 @@ function Home() {
       
       <Hero />
 
-      <GridSection 
+      <CardsSwiper 
         id="super-promos" 
         title="Super" 
         titleAccent="Promos" 
         subtitle="Las mejores combinaciones para compartir con quien más quieres." 
         images={superPromos} 
-        theme="dark" 
         onImageClick={setSelectedImage} 
       />
 
