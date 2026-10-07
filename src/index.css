@@ -899,10 +899,14 @@ body {
 
 /* Cards Swiper Component */
 .cards-swiper-section {
-  padding: 4rem 0;
+  padding: 2rem 0; /* Reduced from 4rem */
   background-color: var(--darker);
   overflow: hidden;
   position: relative;
+}
+
+.cards-swiper-section .section-header {
+  margin-bottom: 1.5rem;
 }
 
 /* Dynamic Background Glows */
@@ -960,7 +964,7 @@ body {
 
 .cards-swiper-deck {
   width: 260px;
-  height: 460px;
+  height: 500px;
   padding-bottom: 30px;
 }
 
@@ -1037,14 +1041,18 @@ body {
 @media (min-width: 768px) {
   .cards-swiper-deck {
     width: 350px;
-    height: 620px;
+    height: 680px;
   }
 }
 
 /* Coverflow Swiper Component */
 .coverflow-section {
-  padding: 4rem 0;
+  padding: 2rem 0; /* Reduced from 4rem */
   overflow: hidden;
+}
+
+.coverflow-section .section-header {
+  margin-bottom: 1.5rem;
 }
 
 .coverflow-swiper {
@@ -1057,7 +1065,7 @@ body {
   background-position: center;
   background-size: cover;
   width: 260px !important;
-  height: 460px !important;
+  height: 500px !important;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
@@ -1098,6 +1106,6 @@ body {
 @media (min-width: 768px) {
   .coverflow-slide {
     width: 350px !important;
-    height: 620px !important;
+    height: 680px !important;
   }
 }
