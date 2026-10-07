@@ -39,7 +39,7 @@ export const Hero = () => {
         <motion.a 
           href="https://wa.link/ixbo6p" 
           target="_blank" 
-          rel="noreferrer" 
+          rel="noopener noreferrer" 
           className="cta-button"
           whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px rgba(211, 47, 47, 0.6)" }}
           whileTap={{ scale: 0.95 }}

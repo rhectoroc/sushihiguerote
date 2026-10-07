@@ -46,7 +46,7 @@ export const ImageModal = ({ image, onClose }: ImageModalProps) => {
                 <a 
                   href={whatsappUrl}
                   target="_blank" 
-                  rel="noreferrer" 
+                  rel="noopener noreferrer" 
                   className="cta-button modal-order-btn-floating"
                 >
                   <ShoppingBag size={20} /> {isMenu ? "Haz tu pedido" : `Pedir ${image.title}`}

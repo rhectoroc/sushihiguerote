@@ -37,7 +37,7 @@ export const Navbar = () => {
           <li><a href="#promos">Promociones</a></li>
           <li><a href="#menu">Menú</a></li>
           <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="nav-order-btn">
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="nav-order-btn">
               <ShoppingBag size={18} />
               Haz tu pedido
             </a>
@@ -68,7 +68,7 @@ export const Navbar = () => {
               <li><a href="#promos" onClick={closeMobileMenu}>Promociones</a></li>
               <li><a href="#menu" onClick={closeMobileMenu}>Menú</a></li>
               <li>
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="nav-order-btn mobile-cta" onClick={closeMobileMenu}>
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="nav-order-btn mobile-cta" onClick={closeMobileMenu}>
                   <ShoppingBag size={20} />
                   Haz tu pedido
                 </a>
