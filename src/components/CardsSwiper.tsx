@@ -48,9 +48,6 @@ export const CardsSwiper: React.FC<CardsSwiperProps> = ({ id, title, titleAccent
                 <img src={item.image} alt={item.title} className="swiper-img" />
                 <div className="swiper-card-overlay">
                   <h3>{item.title}</h3>
-                  <button className="cta-button swiper-order-btn">
-                    <ShoppingBag size={18} /> Ordenar
-                  </button>
                 </div>
               </div>
             </SwiperSlide>

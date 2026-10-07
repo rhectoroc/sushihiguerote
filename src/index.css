@@ -914,7 +914,7 @@ body {
 
 .cards-swiper-deck {
   width: 320px;
-  height: 480px;
+  height: 600px; /* Increased height so vertical image fits better */
   padding-bottom: 30px;
 }
 
@@ -990,7 +990,7 @@ body {
 
 @media (min-width: 768px) {
   .cards-swiper-deck {
-    width: 450px;
-    height: 650px;
+    width: 420px;
+    height: 750px;
   }
 }
