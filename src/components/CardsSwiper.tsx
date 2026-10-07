@@ -1,7 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards, Autoplay, Pagination } from 'swiper/modules';
-import { ShoppingBag } from 'lucide-react';
 
 // Swiper styles
 import 'swiper/css';
