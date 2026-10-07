@@ -1056,8 +1056,8 @@ body {
 .coverflow-slide {
   background-position: center;
   background-size: cover;
-  width: 320px !important;
-  height: 570px !important;
+  width: 260px !important;
+  height: 460px !important;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
@@ -1097,7 +1097,7 @@ body {
 
 @media (min-width: 768px) {
   .coverflow-slide {
-    width: 450px !important;
-    height: 800px !important;
+    width: 350px !important;
+    height: 620px !important;
   }
 }
