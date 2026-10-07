@@ -40,6 +40,27 @@ export const GridSection = ({ id, title, titleAccent, subtitle, images, theme, o
   const sectionClass = theme === 'dark' ? 'section dark-section relative' : 'section light-section';
   const titleClass = theme === 'light' ? 'section-title text-dark' : 'section-title';
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>, isMenuCard: boolean) => {
+    if (!isMenuCard) return;
+    const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - left) / width) * 100;
+    const y = ((e.clientY - top) / height) * 100;
+    const img = e.currentTarget.querySelector('img');
+    if (img) {
+      img.style.transformOrigin = `${x}% ${y}%`;
+      img.style.transform = 'scale(2.2)';
+    }
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>, isMenuCard: boolean) => {
+    if (!isMenuCard) return;
+    const img = e.currentTarget.querySelector('img');
+    if (img) {
+      img.style.transform = 'scale(1)';
+      img.style.transformOrigin = 'center center';
+    }
+  };
+
   return (
     <section id={id} className={sectionClass}>
       <motion.div
@@ -62,11 +83,13 @@ export const GridSection = ({ id, title, titleAccent, subtitle, images, theme, o
           {images.map((img) => (
             <motion.div 
               key={img.id} 
-              className={cardClassName}
+              className={`${cardClassName} ${cardClassName === 'menu-card' ? 'zoomable-card' : ''}`}
               variants={itemVariants}
-              whileHover={cardClassName === 'menu-card' ? { scale: 1.03, zIndex: 10 } : { y: -15, scale: 1.02 }}
+              whileHover={cardClassName !== 'menu-card' ? { y: -15, scale: 1.02 } : undefined}
               transition={cardClassName === 'menu-card' ? { type: 'spring', stiffness: 200 } : { type: 'spring', stiffness: 300, damping: 20 }}
               onClick={() => onImageClick(img)}
+              onMouseMove={(e) => handleMouseMove(e, cardClassName === 'menu-card')}
+              onMouseLeave={(e) => handleMouseLeave(e, cardClassName === 'menu-card')}
             >
               {cardClassName === 'image-card' && <div className="card-glare"></div>}
               <img src={img.image} alt={img.title} />

@@ -1114,3 +1114,18 @@ body {
     height: 600px !important;
   }
 }
+
+/* Menu Card Zoom Effect */
+.zoomable-card {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+}
+
+.zoomable-card img {
+  transition: transform 0.15s ease-out;
+  will-change: transform, transform-origin;
+  display: block;
+  width: 100%;
+  height: auto;
+}
