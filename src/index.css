@@ -1129,3 +1129,42 @@ body {
   width: 100%;
   height: auto;
 }
+
+/* Menu Dynamic Background */
+.menu-bg-elements {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.menu-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(150px);
+  animation: float-menu 25s infinite ease-in-out alternate;
+}
+
+.menu-blob.blob-red {
+  background: rgba(230, 57, 70, 0.35); /* Sushi Red */
+  width: 60vw; height: 60vw;
+  max-width: 600px; max-height: 600px;
+  bottom: -15%; left: -10%;
+  animation-delay: -5s;
+}
+
+.menu-blob.blob-accent {
+  background: rgba(255, 77, 109, 0.25); /* Pinkish accent */
+  width: 50vw; height: 50vw;
+  max-width: 500px; max-height: 500px;
+  top: -5%; right: -5%;
+  animation-delay: -15s;
+}
+
+@keyframes float-menu {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(15vw, -5vh) scale(1.1) rotate(45deg); }
+  66% { transform: translate(-10vw, -15vh) scale(0.9) rotate(90deg); }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+}

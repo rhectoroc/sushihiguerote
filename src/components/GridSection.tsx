@@ -63,7 +63,17 @@ export const GridSection = ({ id, title, titleAccent, subtitle, images, theme, o
 
   return (
     <section id={id} className={sectionClass}>
+      {/* Dynamic Background Elements for Menu */}
+      {cardClassName === 'menu-card' && (
+        <div className="menu-bg-elements">
+          <div className="menu-blob blob-red"></div>
+          <div className="menu-blob blob-accent"></div>
+        </div>
+      )}
+
       <motion.div
+        className="section-content-wrapper"
+        style={{ position: 'relative', zIndex: 2 }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
