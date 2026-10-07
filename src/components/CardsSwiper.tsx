@@ -37,7 +37,7 @@ export const CardsSwiper: React.FC<CardsSwiperProps> = ({ id, title, titleAccent
           effect={'cards'}
           grabCursor={true}
           modules={[EffectCards, Autoplay, Pagination]}
-          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
           pagination={{ clickable: true, dynamicBullets: true }}
           className="cards-swiper-deck"
         >
