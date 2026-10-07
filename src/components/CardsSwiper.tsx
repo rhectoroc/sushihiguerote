@@ -25,6 +25,12 @@ interface CardsSwiperProps {
 export const CardsSwiper: React.FC<CardsSwiperProps> = ({ id, title, titleAccent, subtitle, images, onImageClick }) => {
   return (
     <section id={id} className="section cards-swiper-section">
+      {/* Dynamic Background Elements */}
+      <div className="swiper-bg-elements">
+        <div className="swiper-blob blob-1"></div>
+        <div className="swiper-blob blob-2"></div>
+      </div>
+
       <div className="section-header">
         <h2 className="section-title">
           {title} {titleAccent && <span className="accent-text">{titleAccent}</span>}
