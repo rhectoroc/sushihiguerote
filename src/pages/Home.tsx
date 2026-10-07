@@ -3,6 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { GridSection } from '../components/GridSection';
 import { CardsSwiper } from '../components/CardsSwiper';
+import { CoverflowSwiper } from '../components/CoverflowSwiper';
 import { Footer } from '../components/Footer';
 import { ImageModal } from '../components/ImageModal';
 import '../index.css';
@@ -51,14 +52,13 @@ function Home() {
         onImageClick={setSelectedImage} 
       />
 
-      <GridSection 
+      <CoverflowSwiper 
         id="promos" 
         title="Promo" 
         titleAccent="ciones" 
         images={promos} 
         theme="light" 
         onImageClick={setSelectedImage} 
-        cardClassName="image-card dark-shadow" 
       />
 
       <GridSection 

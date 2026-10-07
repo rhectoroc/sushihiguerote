@@ -1040,3 +1040,64 @@ body {
     height: 750px;
   }
 }
+
+/* Coverflow Swiper Component */
+.coverflow-section {
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+.coverflow-swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.coverflow-slide {
+  background-position: center;
+  background-size: cover;
+  width: 280px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  cursor: grab;
+}
+
+.coverflow-slide:active {
+  cursor: grabbing;
+}
+
+.coverflow-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.coverflow-slide:hover img {
+  transform: scale(1.05);
+}
+
+.coverflow-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 3rem 1rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3) 60%, transparent);
+}
+
+.coverflow-overlay h3 {
+  color: white;
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+}
+
+@media (min-width: 768px) {
+  .coverflow-slide {
+    width: 400px;
+    height: 550px;
+  }
+}
