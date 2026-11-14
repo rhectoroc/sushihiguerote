@@ -80,6 +80,11 @@
   - Botón alternativo para cerrar y scrollear suavemente a `#super-promos`.
 - **Integración y Estilos:**
   - Registrado en [`Home.tsx`](src/pages/Home.tsx) y estilos responsivos aplicados en [`index.css`](src/index.css).
+- **Optimización Responsive Integral:**
+  - **Ventana Emergente Guatire:** Diseño ultra-compacto para móviles, con `max-height: calc(100dvh - 1.5rem)`, scroll vertical suave invisible, tipografía y paddings reducidos en pantallas pequeñas para evitar que se vea alargada o desborde.
+  - **Cursor Personalizado:** Elevación de `z-index` al máximo nivel (`2147483647`) para asegurar visibilidad constante sobre cualquier capa o modal.
+  - **Hero & Secciones:** Soporte para Dynamic Viewport Units (`100dvh`), reducción del relleno vertical excesivo en secciones de `7rem` a `3.5rem` / `2.75rem` en teléfonos.
+  - **Swipers & Menú:** Proporciones adaptativas en móvil para Super Promos y Promociones Coverflow, y distribución fluida a 1 columna en pantallas `< 600px`.
 
 ---
 

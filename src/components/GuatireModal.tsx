@@ -49,23 +49,23 @@ export const GuatireModal = ({ isOpen, onClose }: GuatireModalProps) => {
                 ¡Llegamos a <span className="text-highlight">Guatire</span>! 🍣🛵
               </h2>
               <p className="guatire-modal-subtitle">
-                A partir de hoy, disfruta de la mejor gastronomía japonesa de <strong>Sushihiguerote</strong> directamente en la puerta de tu casa u oficina en Guatire.
+                Disfruta de nuestros rolls y Super Promos con delivery directo a tu puerta u oficina en Guatire.
               </p>
             </div>
 
             {/* Beneficios / Puntos Clave */}
             <div className="guatire-features-list">
               <div className="guatire-feature-item">
-                <CheckCircle2 size={18} className="feature-icon" />
-                <span><strong>Entregas directas</strong> en toda la zona de Guatire y alrededores.</span>
+                <CheckCircle2 size={16} className="feature-icon" />
+                <span><strong>Entregas directas</strong> en Guatire y zonas cercanas.</span>
               </div>
               <div className="guatire-feature-item">
-                <Sparkles size={18} className="feature-icon" />
-                <span><strong>Misma frescura y calidad</strong> de nuestras Super Promos y Menú.</span>
+                <Sparkles size={16} className="feature-icon" />
+                <span><strong>Misma frescura y calidad</strong> de nuestras Super Promos.</span>
               </div>
               <div className="guatire-feature-item">
-                <MapPin size={18} className="feature-icon" />
-                <span><strong>Atención personalizada</strong> y pedidos inmediatos por WhatsApp.</span>
+                <MapPin size={16} className="feature-icon" />
+                <span><strong>Atención y pedidos inmediatos</strong> por WhatsApp.</span>
               </div>
             </div>
 
