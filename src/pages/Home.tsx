@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
+import { DeliveryMarquee } from '../components/DeliveryMarquee';
 import { GridSection } from '../components/GridSection';
 import { CardsSwiper } from '../components/CardsSwiper';
 import { CoverflowSwiper } from '../components/CoverflowSwiper';
 import { Footer } from '../components/Footer';
 import { ImageModal } from '../components/ImageModal';
+import { GuatireModal } from '../components/GuatireModal';
 import '../index.css';
 
 const superPromos = [
@@ -32,6 +34,23 @@ const menuImages = [
 
 function Home() {
   const [selectedImage, setSelectedImage] = useState<{ id: number; image: string; title: string } | null>(null);
+  const [isGuatireModalOpen, setIsGuatireModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Si no ha visto el modal en esta sesión, abrirlo automáticamente tras 1.2 segundos
+    const hasSeenModal = sessionStorage.getItem('guatire_delivery_notified');
+    if (!hasSeenModal) {
+      const timer = setTimeout(() => {
+        setIsGuatireModalOpen(true);
+      }, 1200);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const handleCloseGuatireModal = () => {
+    setIsGuatireModalOpen(false);
+    sessionStorage.setItem('guatire_delivery_notified', 'true');
+  };
 
   return (
     <div className="app-container">
@@ -42,6 +61,9 @@ function Home() {
       <Navbar />
       
       <Hero />
+
+      {/* Ticker / Cinta Marquee continua de Delivery en Guatire */}
+      <DeliveryMarquee onOpenModal={() => setIsGuatireModalOpen(true)} />
 
       <CardsSwiper 
         id="super-promos" 
@@ -77,6 +99,12 @@ function Home() {
       <ImageModal 
         image={selectedImage} 
         onClose={() => setSelectedImage(null)} 
+      />
+
+      {/* Pop-up Modal Informativo de Delivery en Guatire */}
+      <GuatireModal 
+        isOpen={isGuatireModalOpen} 
+        onClose={handleCloseGuatireModal} 
       />
     </div>
   );

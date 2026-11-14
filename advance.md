@@ -68,6 +68,21 @@
 
 ---
 
+### 5. Lanzamiento y Anuncio de Delivery en Guatire
+- **Componente Marquee Ticker ([`DeliveryMarquee.tsx`](src/components/DeliveryMarquee.tsx)):**
+  - Cinta continua infinita situada estratégicamente entre el Hero y las Super Promos.
+  - Íconos interactivos de moto (`Bike`), fuegos (`Flame`), destellos (`Sparkles`) y ubicación (`MapPin`).
+  - Pausa de scroll al pasar el cursor (`hover`) y botón de acción rápida para ordenar a Guatire.
+- **Componente Modal Emergente ([`GuatireModal.tsx`](src/components/GuatireModal.tsx)):**
+  - Pop-up estilizado con estética cyberpunk/japonesa, borde superior neón y badge pulsante.
+  - Se activa automáticamente a los 1.2s de ingresar a la página si el usuario no lo ha cerrado previamente en la sesión (`sessionStorage`).
+  - Botón de llamado a la acción con enlace directo a WhatsApp pre-configurado para pedidos en Guatire.
+  - Botón alternativo para cerrar y scrollear suavemente a `#super-promos`.
+- **Integración y Estilos:**
+  - Registrado en [`Home.tsx`](src/pages/Home.tsx) y estilos responsivos aplicados en [`index.css`](src/index.css).
+
+---
+
 ## 🚀 Estado Actual
 - **Build de producción:** `npm run build` compila con éxito (0 errores).
 - **Vulnerabilidades:** 0 vulnerabilidades reportadas por `npm audit`.
